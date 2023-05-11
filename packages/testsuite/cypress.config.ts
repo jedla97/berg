@@ -26,7 +26,7 @@ export default defineConfig({
                   target: "/home/fixtures",
                 },
               ])
-              .withWaitStrategy(Wait.forLogMessage(new RegExp(".*(WildFly Full.*|JBoss EAP.*)started in.*")))
+              .withWaitStrategy(Wait.forLogMessage(new RegExp(".*(WildFly.*|JBoss EAP.*)started in.*")))
               .withStartupTimeout(333000)
               .withCommand(["-c", configuration || "standalone-insecure.xml"])
               .start()
