@@ -58,11 +58,11 @@ describe("TESTS: Homepage", () => {
     });
   });
 
-  it("Should load Patching page", () => {
-    cy.get("#tlc-patching").click();
+  it("Should load Update Manager page", () => {
+    cy.get("#tlc-installer").click();
     cy.get("#hal-finder-preview").should("be.visible");
     cy.url().should((url) => {
-      expect(url).to.contain("#patching");
+      expect(url).to.contain("#update-manager");
     });
   });
 
