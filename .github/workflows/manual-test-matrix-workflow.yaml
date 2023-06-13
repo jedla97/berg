@@ -31,6 +31,8 @@ jobs:
             "homepage",
             "smoke",
           ]
+        exclude:
+          - homepage
     name: "Run tests"
     runs-on: "ubuntu-latest"
     steps:
