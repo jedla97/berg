@@ -32,9 +32,9 @@ jobs:
             "smoke",
           ]
         exclude:
-          - "datasource"
-          - "batch-jberet"
-          - "homepage"
+          - specs: "datasource"
+          - specs: "batch-jberet"
+          - specs: "homepage"
     name: "Run tests"
     runs-on: "ubuntu-latest"
     steps:
