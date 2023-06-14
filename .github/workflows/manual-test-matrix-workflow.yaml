@@ -1,10 +1,10 @@
-on: [workflow_dispatch]
+on: [workflow_dispatch, push]
 name: "Manual matrix test execution"
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  /test_matrix:
+  test_matrix:
     strategy:
       matrix:
         specs:
